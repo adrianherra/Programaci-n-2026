@@ -11,7 +11,8 @@ horas_estudio = []
 
 for minutos in minutos_estudio:
     # TODO: convierta los minutos a horas y agregue el resultado a la lista.
-    pass
+    horas = minutos / 60
+    horas_estudio.append(horas)
 
 print("Horas de estudio:", horas_estudio)
 
