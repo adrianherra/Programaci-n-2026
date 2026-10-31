@@ -20,8 +20,10 @@ print("Meta inicial:", sede["meta"])
 
 sede["meta"] = "470000"
 
+
 print("Meta corregida:", sede["meta"])
 print("Nombre después del cambio:", sede["nombre"])
+print("Total de las ventas", sum(sede["ventas"]))
 
 # Para explicar: ¿por qué el nombre y las ventas siguen iguales?
 # Para comprobar: la meta pasa de 450000 a 470000.
