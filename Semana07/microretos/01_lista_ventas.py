@@ -4,7 +4,9 @@ Prediga la salida, modifique una posición y explique el cambio.
 """
 
 # Una lista conserva el orden: índice 0 = primer día, índice 1 = segundo día.
+#           0      1      2
 ventas = [85000, 92000, 78000]
+#           -3    -2     -1
 print("Venta del segundo día:", ventas[1])
 print("Total inicial:", sum(ventas))
 
