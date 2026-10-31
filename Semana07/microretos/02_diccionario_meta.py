@@ -18,6 +18,8 @@ print("Meta inicial:", sede["meta"])
 # La meta registrada cambió a 470000.
 # TODO: actualice solo el valor asociado con la clave "meta".
 
+sede["meta"] = "470000"
+
 print("Meta corregida:", sede["meta"])
 print("Nombre después del cambio:", sede["nombre"])
 
