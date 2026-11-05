@@ -5,6 +5,8 @@ capacidad = 300
 
 # TODO: Recorra asistencias con for para acumular el total y contar los bloques
 #       que SUPERAN el 70 % de la capacidad (210 no cuenta).
+
+
 # TODO: Calcule el promedio y su porcentaje de ocupación.
 # TODO: Clasifique el promedio: >=80 % alta; >=50 % media; si no, baja.
 # TODO: Muestre total, promedio, porcentaje, cantidad de bloques y estado.
