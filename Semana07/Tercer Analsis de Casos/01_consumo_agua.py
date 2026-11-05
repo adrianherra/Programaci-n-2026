@@ -25,10 +25,24 @@ porcentaje_reduccion = (litros_ahorrados / primer_dia) * 100
 #       de lo contrario, sin reducción.
 
 if porcentaje_reduccion >= 15:
-    
+    estado = "reducción alta"
+elif porcentaje_reduccion > 0:
+    estado = "reducción moderada"
+else:
+    estado = "sin reducción"
 
 # TODO: Muestre los cinco resultados.
 # Control: total 541 L; promedio 108,2 L; ahorro 24 L; reducción 20 %;
 #          reducción alta.
 # Prueba: use temporalmente cinco consumos iguales. Debe indicar 0 % y
 # "Sin reducción". Restaure la lista antes de entregar.
+
+
+print("Reporte de Cálculo de consumo combustible")
+print("-"*80,"\n")
+
+print(f"Consumo total: {total} L")
+print(f"Promedio diario: {promedio} L")
+print(f"Ahorro respecto al primer día: {litros_ahorrados} L")
+print(f"Reducción: {porcentaje_reduccion:.0f}%")
+print(f"Clasificación: {estado}")
