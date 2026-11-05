@@ -1,3 +1,6 @@
+#Nombre del estudiante: Adrián Herra Vargas
+#Fecha: 06/11/2026
+
 """Caso 2: asistencia por bloques. Complete el análisis con un ciclo for."""
 
 asistencias = [120, 180, 210, 250, 230]
@@ -31,4 +34,11 @@ else:
 # Prueba de código: use temporalmente cinco bloques con 240 asistentes cada uno
 # para comprobar el límite del 80 %. Después restaure la lista.
 
+print("Reporte de Asistencia")
+print("-"*80,"\n")
 
+print(f"Total de asistentes: {total}")
+print(f"Promedio por bloque: {promedio:.0f}")
+print(f"Porcentaje de ocupación: {porcentaje:.0f}%")
+print(f"Bloques que superan el 70%: {bloques}")
+print(f"Estado de ocupación: {estado}")
