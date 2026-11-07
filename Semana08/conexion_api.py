@@ -9,7 +9,7 @@ URL_DATOS = (
     "https://api.github.com/repos/amenaactppp/td10-datos-publicos/contents/datos/registros.json?ref=main"
 )
 
-
+ 
 def cargar_datos():
     """Lee el JSON público y devuelve una lista de atenciones."""
     # GitHub recibe la dirección y estas cabeceras para entregar el JSON.

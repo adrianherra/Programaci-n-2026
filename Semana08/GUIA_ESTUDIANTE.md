@@ -129,7 +129,7 @@ aparece, aumentaremos su contador; si es la primera vez, guardaremos el valor
 La suma de los valores debe coincidir con `len(registros)`. Este conteo indica
 cuántas **atenciones** tienen cada diagnóstico. No indica cuántos pacientes
 distintos tienen ese diagnóstico, porque una persona podría tener más de una
-atención.
+atención. 
 
 **Nos preguntamos:** ¿qué diagnóstico aparece más? ¿Por qué el número de
 atenciones puede ser mayor que el número de pacientes?
