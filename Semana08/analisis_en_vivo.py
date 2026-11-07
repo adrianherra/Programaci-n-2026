@@ -17,6 +17,13 @@ if len(registros) < 3:
 
  
 # FASE 1: MOSTRAR Y CONTAR LOS MEDICAMENTOS DE TRES ATENCIONES
+# Cada clave es un nombre de medicamento y su valor es el nombre estandarizado
+equivalencias = {
+    "acetaminofen" : "acetaminofén",
+    "paracetamol" : "acetaminofén",
+    "antiacido" : "antíacido",
+    "lorsartán" : "lorsartan"
+}   
 conteo_medicamentos = {}
 total_medicamentos = 0
    
@@ -31,6 +38,11 @@ for indice in range(3):
          f"\n- Medicamentos: {registro['medicamentos']}")
     
     for medicamento in registro['medicamentos']:
+        #limpieza
+        medicamento = medicamento.strip().lower()
+        if medicamento in equivalencias:
+            medicamento = equivalencias[medicamento]
+        #contar medicamentos    
         total_medicamentos += 1
         if medicamento in conteo_medicamentos:
             conteo_medicamentos[medicamento] += 1
@@ -41,7 +53,8 @@ print(f"\nTotal de medicamentos recetados: {total_medicamentos}")
 print(f"\nConteo de medicamentos recetados: {conteo_medicamentos}")
 
 # FASE 2: CONTAR LOS MEDICAMENTOS DE TODAS LAS ATENCIONES
-
+conteo_medicamentos = {}
+total_medicamentos = 0
 print("\n ANALISIS FASE #2 MEDICAMENTOS Y ATENCIONES")
 for registro in registros:
     print(f"\n\t\tDianostico del paciente")
@@ -52,11 +65,16 @@ for registro in registros:
          f"\n- Medicamentos: {registro['medicamentos']}")
         
     for medicamento in registro['medicamentos']:
+        #limpieza
+        medicamento = medicamento.strip().lower()
+        if medicamento in equivalencias:
+            medicamento = equivalencias[medicamento]
+        #contar medicamentos    
         total_medicamentos += 1
         if medicamento in conteo_medicamentos:
             conteo_medicamentos[medicamento] += 1
         else:
-            conteo_medicamentos[medicamento] = 1    
+            conteo_medicamentos[medicamento] = 1 
             
 print(f"\nTotal de medicamentos recetados: {total_medicamentos}")
 print(f"\nConteo de medicamentos recetados: {conteo_medicamentos}")
