@@ -17,21 +17,50 @@ if len(registros) < 3:
 
  
 # FASE 1: MOSTRAR Y CONTAR LOS MEDICAMENTOS DE TRES ATENCIONES
+conteo_medicamentos = {}
+total_medicamentos = 0
+   
 print("\n ANALISIS FASE #1 MUESTRA 3")
 for indice in range(3):
     registro = registros[indice]
     print(f"\n\t\tDianostico del paciente")
-    print(f"Cédula: {registro['paciente_cedula']}")
-    print(f"Nombre: {registro['paciente_nombre']}")
-    print(f"Cédula: {registro['paciente_cedula']}")
-    print(f"Diagnostico: {registro['diagnostico']}")
-    print(f"Medicamentos: {registro['medicamentos']} \n")
-    print(type(registro['medicamentos']))
+    print(f"\nCédula: {registro['paciente_cedula']}"
+         f"\n- Nombre: {registro['paciente_nombre']}"
+         f"\n- Cédula: {registro['paciente_cedula']}"
+         f"\n- Diagnostico: {registro['diagnostico']}"
+         f"\n- Medicamentos: {registro['medicamentos']}")
     
+    for medicamento in registro['medicamentos']:
+        total_medicamentos += 1
+        if medicamento in conteo_medicamentos:
+            conteo_medicamentos[medicamento] += 1
+        else:
+            conteo_medicamentos[medicamento] = 1    
+        
+print(f"\nTotal de medicamentos recetados: {total_medicamentos}")
+print(f"\nConteo de medicamentos recetados: {conteo_medicamentos}")
+
 # FASE 2: CONTAR LOS MEDICAMENTOS DE TODAS LAS ATENCIONES
+
 print("\n ANALISIS FASE #2 MEDICAMENTOS Y ATENCIONES")
 for registro in registros:
-    print(registro['paciente_nombre'])
+    print(f"\n\t\tDianostico del paciente")
+    print(f"\nCédula: {registro['paciente_cedula']}"
+         f"\n- Nombre: {registro['paciente_nombre']}"
+         f"\n- Cédula: {registro['paciente_cedula']}"
+         f"\n- Diagnostico: {registro['diagnostico']}"
+         f"\n- Medicamentos: {registro['medicamentos']}")
+        
+    for medicamento in registro['medicamentos']:
+        total_medicamentos += 1
+        if medicamento in conteo_medicamentos:
+            conteo_medicamentos[medicamento] += 1
+        else:
+            conteo_medicamentos[medicamento] = 1    
+            
+print(f"\nTotal de medicamentos recetados: {total_medicamentos}")
+print(f"\nConteo de medicamentos recetados: {conteo_medicamentos}")
+    
 # FASE 3: CONTAR ATENCIONES POR HOSPITAL
 
 # FASE 4: CONTAR ATENCIONES POR ENFERMEDAD DIAGNOSTICADA
