@@ -2,7 +2,7 @@
 
 # Este diccionario contiene las equivalencias del ejercicio.
 # La clave es el nombre que podría escribir la persona.
-# El valor es el nombre que guardaremos en la lista.
+# El valor es el nombre que guardaremnnnos en la lista.
 # Las claves están en mayúsculas porque convertiremos la entrada a mayúsculas.
 EQUIVALENCIAS = {
     "ACETAMINOFEN": "ACETAMINOFÉN",
