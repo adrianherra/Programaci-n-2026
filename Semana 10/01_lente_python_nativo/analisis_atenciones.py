@@ -1,19 +1,19 @@
 """Semana 10: resolvemos juntos el caso pendiente de la Semana 9."""
 
 from lector_csv import cargar_atenciones
-
-
+  
+ 
 def explorar_atenciones(atenciones):
     """Decisión 1: ¿qué leímos y cuántas atenciones hay?"""
     # Contamos las filas con un for. Luego miramos los campos de la primera.
     cantidad = 0
     for atencion in atenciones:
         # Completamos aquí el contador.
-        pass
-
+        cantidad += 1
+  
     print("Atenciones:", cantidad)
     print("Campos:", list(atenciones[0]))
-
+    print("Tipo Dato Atenciones:", type(atenciones)) 
 
 def contar_categorias(atenciones):
     """Decisión 2: ¿qué medicamentos, hospitales y diagnósticos aparecen?"""
