@@ -15,11 +15,15 @@ def explorar_atenciones(atenciones):
 
 def contar_categorias(atenciones):
     print("Medicamentos", atenciones['medicamento'].value_counts().to_dict())
-
+    print("Hostitales", atenciones['hospital'].value_counts())
+    print("Diagnosticos", atenciones['diagnostico'].value_counts())  
 
 def concluir(atenciones):
-    pass
-
+    print("Pacientes:", atenciones["cedula"].nunique())
+    print("Minutos espera:", atenciones["minutos_espera"].sum())
+    print("Minutos espera Promedio:", atenciones["minutos_espera"].mean())
+    print("Minutos espera Moda:", atenciones["minutos_espera"].mode())
+    print("Minutos espera Media:", atenciones["minutos_espera"].median())
 
 try:
     #antenciones = pd.read_csv(ARCHIVO_CSV, encoding='utf-8', sep=',')
