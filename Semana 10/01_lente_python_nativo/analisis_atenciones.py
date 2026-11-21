@@ -18,14 +18,25 @@ def explorar_atenciones(atenciones):
 def contar_categorias(atenciones):
     """Decisión 2: ¿qué medicamentos, hospitales y diagnósticos aparecen?"""
     medicamentos = {}
-    hospitales = {}
+    hospitales = {} 
     diagnosticos = {}
 
     for atencion in atenciones:
         # Los nombres ya vienen uniformes en el CSV.
         # Contamos cada categoría en su diccionario con .get().
-        pass
-
+        medicamento = atencion['medicamento']
+        if medicamento not in medicamentos:
+            medicamentos[medicamento] = 0
+        medicamentos[medicamento] +=1
+        
+        #get()
+        hospital = atencion['hospital']
+        hospitales[hospital] = hospitales.get(hospital, 0) + 1
+        
+        #get()
+        diagnostico = atencion['diagnostico']
+        diagnosticos[diagnostico] = diagnosticos.get(diagnostico, 0) + 1
+        
     print("Medicamentos:", medicamentos)
     print("Hospitales:", hospitales)
     print("Diagnósticos:", diagnosticos)

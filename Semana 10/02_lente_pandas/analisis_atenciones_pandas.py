@@ -1,16 +1,20 @@
 """El mismo expediente, con Pandas y las mismas tres funciones."""
 
+import pandas as pd
 from pathlib import Path
+
 
 ARCHIVO_CSV = Path(__file__).with_name("atenciones.csv")
 
 
 def explorar_atenciones(atenciones):
-    pass
+    print('Atenciones: ', len(atenciones))
+    print('Atenciones tipo: ', type(atenciones))
+    print('Campos: ', list(atenciones.columns))
 
 
 def contar_categorias(atenciones):
-    pass
+    print("Medicamentos", atenciones['medicamento'].value_counts().to_dict())
 
 
 def concluir(atenciones):
@@ -18,7 +22,9 @@ def concluir(atenciones):
 
 
 try:
-    pass ##PANDAS.....
+    #antenciones = pd.read_csv(ARCHIVO_CSV, encoding='utf-8', sep=',')
+    atenciones = pd.read_csv(ARCHIVO_CSV)
+    
 except FileNotFoundError:
     print(f"No encontramos el archivo: {ARCHIVO_CSV}")
     raise SystemExit(1)

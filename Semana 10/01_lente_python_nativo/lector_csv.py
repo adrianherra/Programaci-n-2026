@@ -21,7 +21,7 @@ def cargar_atenciones(ruta_csv=ARCHIVO_CSV):
                 index['minutos_espera'] = int(index['minutos_espera'])
                 # TODO 1B: agregue cada fila a la lista atenciones.
                 atenciones.append(index) 
-                
+                 
 
     except FileNotFoundError:
         print(f"No se encontró el archivo de datos: {ruta_csv}")
